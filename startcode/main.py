@@ -1,11 +1,19 @@
 import pygame
+from snake import *
 
-breedte = 8000
-hoogte = 6000
+breedte = 800
+hoogte = 600
 
 pygame.init()
 
 venster = pygame.display.set_mode((breedte, hoogte))
 pygame.display.set_caption('Snake')
 
-pygame.time.wait(5000)
+def game_lus():
+    snake = Snake(breedte//2, hoogte//2)
+    snake.teken(venster)
+
+    pygame.display.update()
+    pygame.time.wait(5000)
+
+game_lus()
