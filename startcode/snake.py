@@ -13,4 +13,5 @@ class Snake:
         self.y_verandering = 0
 
     def teken(self, venster):
-        self.x_verandering = self.x
+        for segment in self.lijst_slang:
+            pygame.draw.rect(venster, kleur_slang, pygame.Rect(segment[0], segment[1], veld_grootte, veld_grootte))
