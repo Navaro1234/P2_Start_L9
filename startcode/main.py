@@ -1,20 +1,11 @@
 import pygame
-import time
-from snake import Snake
-from food import Food
 
-# kleuren
+breedte = 8000
+hoogte = 6000
 
-# schermgrootte
+pygame.init()
 
-# Snelheid van het spel
+venster = pygame.display.set_mode((breedte, hoogte))
+pygame.display.set_caption('Snake')
 
-# Initialiseren van de pygame-module
-
-# Creëer een venster met opgegeven breedte en hoogte
-
-# Functie om de score op het scherm te tonen
-
-# Hoofdloop van het spel
-
-# Start de hoofdloop van het spel
+pygame.time.wait(5000)

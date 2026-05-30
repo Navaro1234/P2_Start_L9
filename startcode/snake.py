@@ -1,5 +1,8 @@
 import pygame
 
+veld_grootte = 20
+kleur_slang = ""
+
 class Snake:
     def __init__(self):
 
