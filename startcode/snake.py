@@ -15,3 +15,11 @@ class Snake:
     def teken(self, venster):
         for segment in self.lijst_slang:
             pygame.draw.rect(venster, kleur_slang, pygame.Rect(segment[0], segment[1], veld_grootte, veld_grootte))
+
+    def beweeg(self):
+        self.x += self.x_verandering
+        self.y += self.y_verandering
+        slang_kop = [self.x, self.y]
+        self.lijst_slang.append(slang_kop)
+        if len(self.lijst_slang) > self.lengte_slang:
+            del self.lijst_slang[0]

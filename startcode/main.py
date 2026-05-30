@@ -1,8 +1,13 @@
 import pygame
-from snake import *
+import time
+from snake import Snake
+
+kleur_achtergrond = (0,0,0)
 
 breedte = 800
 hoogte = 600
+veld_grootte = 20
+spel_snelheid = 5
 
 pygame.init()
 
@@ -33,9 +38,12 @@ def game_lus():
                     snake.x_verandering = 0
                     snake.y_verandering = -veld_grootte
 
+    snake.beweeg()
+    venster.fill(kleur_achtergrond)
     snake.teken(venster)
 
     pygame.display.update()
-    pygame.time.wait(5000)
+
+    time.sleep(1 / spel_snelheid)
 
 game_lus()
