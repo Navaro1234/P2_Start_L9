@@ -19,6 +19,20 @@ def game_lus():
             if event.type == pygame.QUIT:
                 game_over = True
 
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT and snake.x_verandering == 0:
+                    snake.x_verandering = -veld_grootte
+                    snake.y_verandering = 0
+                elif event.key == pygame.K_RIGHT and snake.x_verandering == 0:
+                    snake.x_verandering = veld_grootte
+                    snake.y_verandering = 0
+                elif event.key == pygame.K_UP and snake.y_verandering == 0:
+                    snake.x_verandering = 0
+                    snake.y_verandering = -veld_grootte
+                elif event.key == pygame.K_DOWN and snake.y_verandering == 0:
+                    snake.x_verandering = 0
+                    snake.y_verandering = -veld_grootte
+
     snake.teken(venster)
 
     pygame.display.update()
